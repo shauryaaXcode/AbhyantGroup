@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      const path = window.location.pathname;
+      const base = "/AbhyantGroup/";
+      if (path.startsWith(base)) {
+        sessionStorage.redirect = path.slice(base.length) + window.location.search + window.location.hash;
+      }
+      window.location.replace(base);
+    </script>
+  </head>
+  <body></body>
+</html>
